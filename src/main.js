@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './assets/main.css'
+import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -7,7 +7,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 let app = createApp(App)
 let router = createRouter({
   history: createWebHistory(),
-  routes: import.meta.hot ? [] : routes,
+  routes: import.meta.hot ? [] : routes
 })
 
 if (import.meta.hot) {

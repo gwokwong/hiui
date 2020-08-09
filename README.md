@@ -1,5 +1,21 @@
-## Vite + Vue 3 + Tailwind CSS/UI starter
+## Vite + Vue 3 + Tailwind CSS/UI starter ⚡
 
-Note: starter includes [Tailwind UI](https://tailwindui.com) (paid product)
+This starter includes:
 
-## WIP
+- Tailwind CSS (free) and Tailwind UI (paid product)
+- "Inter var" font (self hosted, woff2 format only)
+
+### Getting Started
+
+npm:
+```sh
+npm install
+npm run dev
+npm run build
+```
+yarn:
+```sh
+yarn
+yarn dev
+yarn build
+```
