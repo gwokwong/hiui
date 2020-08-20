@@ -10,7 +10,7 @@
     "@tailwindcss/ui": "^0.5.0",
     "tailwindcss": "^1.7.1",
     "vue": "next",
-    "vue-router": "^4.0.0-beta.6"
+    "vue-router": "^4.0.0-beta.7"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.6",
