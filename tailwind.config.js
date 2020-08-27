@@ -9,5 +9,8 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       }
     }
+  },
+  future: {
+    removeDeprecatedGapUtilities: true
   }
 }
