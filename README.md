@@ -1,8 +1,9 @@
-## Vite + Vue 3 + Tailwind 2 starter ⚡
+## `Vite + Vue 3.x + Tailwind 2.x` starter ⚡
 
 This starter includes:
 
-- "Inter var" font (self hosted, woff2 format only)
+- Inter var font (self hosted, woff2, version 3.15)
+- Vue Router 4.x
 
 ### Getting Started
 
@@ -21,4 +22,4 @@ yarn build
 
 ### Bonus
 
-[CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with similar stack (Vue 3 + Tailwind CSS + Inter var font)
+[CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with a similar stack (Vue 3.x + Tailwind 2.x + Inter var font)
