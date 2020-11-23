@@ -9,7 +9,7 @@
   "dependencies": {
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
     "vue": "next",
-    "vue-router": "^4.0.0-rc.3"
+    "vue-router": "^4.0.0-rc.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
