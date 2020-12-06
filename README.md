@@ -1,6 +1,6 @@
 ## `Vite + Vue 3.x + Tailwind 2.x` starter ⚡
 
-This starter includes:
+This starter template also includes:
 
 - [Inter var font](https://github.com/rsms/inter) (self hosted, woff2, version 3.15)
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
