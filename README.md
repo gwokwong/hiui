@@ -2,6 +2,7 @@
 
 This starter includes:
 
+- First-party plugins needed for Tailwind UI (`@tailwindcss/forms`, `@tailwindcss/typography`, `@tailwindcss/aspect-ratio`). Uncomment them in `tailwind.config.js` to enable.
 - Inter var font (self hosted, woff2, version 3.15)
 - Vue Router 4.x
 
