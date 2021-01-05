@@ -1,25 +1,31 @@
 <template>
   <main>
     <div class="bg-gray-50">
-      <div class="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div
+        class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
+      >
         <h2
           class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          Ready to dive in?
-          <br />Start your free trial today.
+          About Page
+          <br />
+          <span class="text-indigo-600">Vite 2.x + Vue 3.x + Tailwind 2.x</span>
         </h2>
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
           <div class="inline-flex rounded-md shadow">
             <router-link
               to="/"
               class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-            >Get started</router-link>
+              >Back Home</router-link
+            >
           </div>
-          <div class="ml-3 inline-flex">
+          <div class="ml-3 inline-flex rounded-md shadow">
             <a
-              href="#"
-              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 transition duration-150 ease-in-out"
-            >Learn more</a>
+              target="_blank"
+              href="https://github.com/web2033/vite-vue3-tailwind-starter"
+              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              >Learn more</a
+            >
           </div>
         </div>
       </div>

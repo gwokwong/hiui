@@ -1,4 +1,4 @@
-## `Vite + Vue 3.x + Tailwind 2.x` starter ⚡
+## `Vite 2.x + Vue 3.x + Tailwind 2.x` starter ⚡
 
 This starter template also includes:
 

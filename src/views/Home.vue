@@ -9,20 +9,23 @@
         >
           Ready to dive in?
           <br />
-          <span class="text-indigo-600">Start your free trial today.</span>
+          <span class="text-indigo-600">Vite 2.x + Vue 3.x + Tailwind 2.x</span>
         </h2>
         <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
           <div class="inline-flex rounded-md shadow">
             <router-link
               to="/about"
               class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-            >Get started</router-link>
+              >Next Page</router-link
+            >
           </div>
           <div class="ml-3 inline-flex rounded-md shadow">
             <a
-              href="#"
+              target="_blank"
+              href="https://github.com/web2033/vite-vue3-tailwind-starter"
               class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-            >Learn more</a>
+              >Learn more</a
+            >
           </div>
         </div>
       </div>

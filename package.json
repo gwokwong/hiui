@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue3-tailwind-starter",
+  "name": "vite2-vue3-tailwind2-starter",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,15 +10,16 @@
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "tailwindcss": "^2.0.2",
     "vue": "^3.0.5",
     "vue-router": "^4.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
+    "@vitejs/plugin-vue": "^1.0.4",
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "cross-env": "^7.0.3",
-    "vite": "^1.0.0-rc.13"
+    "vite": "^2.0.0-beta.5"
   }
 }
