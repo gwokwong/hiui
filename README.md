@@ -7,6 +7,7 @@ This starter template also includes:
 - First-party plugins needed for Tailwind UI. Uncomment them in `tailwind.config.js` to enable.
   * [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
   * [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
+  * [@tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
   * [@tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
 
 ### Getting Started 🚀
