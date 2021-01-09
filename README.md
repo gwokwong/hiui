@@ -3,7 +3,7 @@
 This starter template also includes:
 
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
-- [Inter var font](https://github.com/rsms/inter) (self hosted, woff2, version 3.15)
+- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2 format, version 3.15, see `public/font/inter.css`)
 - First-party plugins needed for Tailwind UI. Uncomment them in `tailwind.config.js` to enable.
   * [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
   * [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
