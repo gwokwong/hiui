@@ -31,8 +31,5 @@
 import ButtonRepo from '@/components/ButtonRepo.vue'
 export default {
   components: { ButtonRepo },
-  setup() {
-    return { ButtonRepo }
-  },
 }
 </script>
