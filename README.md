@@ -1,4 +1,4 @@
-## `Vite 2.x + Vue 3.x + Tailwind 2.x` starter ⚡
+## `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
 This starter template also includes:
 
@@ -28,6 +28,7 @@ yarn build
 yarn serve
 ```
 
-### Bonus
+#### Bonus links
 - [vue-tailwindcss-cdn](https://github.com/web2033/vue-tailwindcss-cdn) (a single HTML file with CDN links)
 - [CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with a similar stack (Vue 3.x + Tailwind 2.x + Inter var font)
+- [base.css](https://github.com/web2033/base.css) (base styles for Tailwind CSS and other projects as an NPM package)
