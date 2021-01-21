@@ -9,6 +9,7 @@ This starter template also includes:
   * [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
   * [@tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
   * [@tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+- [Local web server](https://github.com/lwsjs/local-web-server/wiki/CLI-usage) (quickly test your build output locally, SPA mode by default)
 
 ### Getting Started 🚀
 
@@ -17,12 +18,14 @@ npm:
 npm install
 npm run dev
 npm run build
+npm run serve
 ```
 yarn:
 ```sh
 yarn
 yarn dev
 yarn build
+yarn serve
 ```
 
 ### Bonus
