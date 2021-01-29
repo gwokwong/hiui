@@ -23,6 +23,6 @@
     "cross-env": "^7.0.3",
     "local-web-server": "^4.2.1",
     "postcss": "^8.2.4",
-    "vite": "^2.0.0-beta.51"
+    "vite": "^2.0.0-beta.56"
   }
 }
