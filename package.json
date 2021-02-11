@@ -17,10 +17,10 @@
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
-    "vite": "^2.0.0-beta.67",
+    "vite": "^2.0.0-beta.68",
     "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.5",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.6",
     "autoprefixer": "^10.2.4",
     "cross-env": "^7.0.3"
   }
