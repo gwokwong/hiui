@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build",
-    "serve": "ws --directory dist --spa index.html --open"
+    "serve": "vite preview"
   },
   "dependencies": {
     "tailwindcss": "^2.0.3",
@@ -22,7 +22,6 @@
     "@vue/compiler-sfc": "^3.0.5",
     "postcss": "^8.2.4",
     "autoprefixer": "^10.2.4",
-    "cross-env": "^7.0.3",
-    "local-web-server": "^4.2.1"
+    "cross-env": "^7.0.3"
   }
 }
