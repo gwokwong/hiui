@@ -14,7 +14,7 @@
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.4"
   },
   "devDependencies": {
     "vite": "^2.0.1",
