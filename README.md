@@ -1,10 +1,14 @@
 ## `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
+<img src="src/assets/vite.svg" width="33%">
+<img src="src/assets/vue.svg" width="26%" style="margin-bottom: 20px">
+<img src="src/assets/tailwindcss.svg" width="33%" style="margin-bottom: 25px">
+
 This starter template also includes:
 
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
 - [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2 format, version 3.15, see `public/font/inter.css`)
-- First-party plugins needed for Tailwind UI. Uncomment them in `tailwind.config.js` to enable.
+- [@tailwindcss/jit](https://github.com/tailwindlabs/tailwindcss-jit) mode by default and first-party plugins needed for Tailwind UI:
   * [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
   * [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
   * [@tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)

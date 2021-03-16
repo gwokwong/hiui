@@ -1,3 +1,12 @@
+<script>
+import { defineComponent } from 'vue'
+import ButtonRepo from '@/components/ButtonRepo.vue'
+
+export default defineComponent({
+  components: { ButtonRepo },
+})
+</script>
+
 <template>
   <main>
     <div class="bg-gray-50">
@@ -25,9 +34,3 @@
     </div>
   </main>
 </template>
-
-<script setup>
-// see the classic version in Home.vue
-// VSCode Vetur ext may show a warning, it doesn't support this syntax yet
-import ButtonRepo from '@/components/ButtonRepo.vue'
-</script>
