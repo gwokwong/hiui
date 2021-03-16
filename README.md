@@ -2,6 +2,8 @@
 
 ![vvt](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
+⚠ Currently, there's a bug where you can't have space chars in a project's folder name on Windows (try it in a folder without spaces and special chars in its name) ⚠
+
 This starter template also includes:
 
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
