@@ -1,8 +1,6 @@
 ## `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
-<img src="src/assets/vite.svg" width="33%">
-<img src="src/assets/vue.svg" width="26%" style="margin-bottom: 20px">
-<img src="src/assets/tailwindcss.svg" width="33%" style="margin-bottom: 25px">
+![vvt](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
 This starter template also includes:
 
