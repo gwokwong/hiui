@@ -2,17 +2,18 @@
 
 ![vvt](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
-⚠ Currently, there's a bug where you can't have space chars in a project's folder name on Windows (try it in a folder without spaces and special chars in its name) ⚠
-
 This starter template also includes:
 
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
-- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2 format, version 3.15, see `public/font/inter.css`)
-- [@tailwindcss/jit](https://github.com/tailwindlabs/tailwindcss-jit) mode by default and first-party plugins needed for Tailwind UI:
-  * [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
-  * [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
-  * [@tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
-  * [@tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.15, with 'preload' attr, check out index.html)
+- [tailwindcss/jit](https://github.com/tailwindlabs/tailwindcss-jit) mode by default
+
+First-party plugins needed for Tailwind UI:
+
+- [tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
+- [tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)
+- [tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
+- [tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
 
 ### Getting Started 🚀
 
