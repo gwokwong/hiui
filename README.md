@@ -5,7 +5,7 @@
 This starter template also includes:
 
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
-- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.15, with 'preload' attr, check out index.html)
+- [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.17, with 'preload' attr, check out index.html)
 - [tailwindcss/jit](https://github.com/tailwindlabs/tailwindcss-jit) mode by default
 
 First-party plugins needed for Tailwind UI:
