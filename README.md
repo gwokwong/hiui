@@ -1,6 +1,6 @@
-## `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
+# `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
 
-![vvt](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
+![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
 This starter template also includes:
 
@@ -41,3 +41,5 @@ yarn serve
 - [vue-tailwindcss-cdn](https://github.com/web2033/vue-tailwindcss-cdn) (a single HTML file with CDN links)
 - [CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with a similar stack (Vue 3.x + Tailwind 2.x + Inter var font)
 - [base.css](https://github.com/web2033/base.css) (base styles for Tailwind CSS and other projects as an NPM package)
+- [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
+- [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
