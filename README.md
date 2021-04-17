@@ -20,13 +20,19 @@ First-party plugins needed for Tailwind UI:
 
 ### Getting Started 🚀
 
+```sh
+git clone https://github.com/web2033/vite-vue3-tailwind-starter
+cd vite-vue3-tailwind-starter
+```
+
 npm:
 ```sh
-npm install
+npm i
 npm run dev
 npm run build
 npm run serve
 ```
+
 yarn:
 ```sh
 yarn
