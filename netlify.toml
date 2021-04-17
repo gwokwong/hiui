@@ -7,3 +7,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Opting your Website out of Google's FLoC Network
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "interest-cohort=()"
