@@ -21,8 +21,8 @@ First-party plugins needed for Tailwind UI:
 ### Getting Started 🚀
 
 ```sh
-git clone https://github.com/web2033/vite-vue3-tailwind-starter
-cd vite-vue3-tailwind-starter
+npx degit web2033/vite-vue3-tailwind-starter vvt-app
+cd vvt-app
 ```
 
 npm:
