@@ -44,6 +44,8 @@ yarn serve
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web2033/vite-vue3-tailwind-starter)
 
 #### Bonus links
+- [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
+- [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
 - [vue-tailwindcss-cdn](https://github.com/web2033/vue-tailwindcss-cdn) (a single HTML file with CDN links)
 - [CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with a similar stack (Vue 3.x + Tailwind 2.x + Inter var font)
 - [base.css](https://github.com/web2033/base.css) (base styles for Tailwind CSS and other projects as an NPM package)
