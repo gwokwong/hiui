@@ -48,8 +48,6 @@ yarn serve
 #### Bonus links
 - [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
 - [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
-- [vue-tailwindcss-cdn](https://github.com/web2033/vue-tailwindcss-cdn) (a single HTML file with CDN links)
-- [CodePen Template](https://codepen.io/web2033/pen/QWNbwxY) with a similar stack (Vue 3.x + Tailwind 2.x + Inter var font)
-- [base.css](https://github.com/web2033/base.css) (base styles for Tailwind CSS and other projects as an NPM package)
+- [Eugene Kopich (@web2033)](https://twitter.com/web2033) / Twitter
 - [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
 - [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
