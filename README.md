@@ -48,6 +48,6 @@ yarn serve
 #### Bonus links
 - [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
 - [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
-- [Eugene Kopich (@web2033)](https://twitter.com/web2033) / Twitter
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - recommended VSCode extension built specifically for Vue 3 (instead of Vetur)
 - [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
 - [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
