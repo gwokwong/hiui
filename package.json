@@ -1,7 +1,6 @@
 {
-  "name": "vite2-vue3-tailwind2-starter",
-  "version": "1.0.0",
-  "private": true,
+  "name": "vite-vue3-tailwind-starter",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
