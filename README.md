@@ -1,4 +1,4 @@
-# `Vite 2.x + Vue 3.x + Tailwind 2.x starter ⚡`
+# `Vite + Vue 3 + Tailwind CSS (starter) ⚡`
 
 ![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
 
@@ -48,6 +48,6 @@ yarn serve
 #### Bonus links
 - [Enabling https on localhost](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/112) (dev notes)
 - [Vite dev server with netlify dev support](https://github.com/web2033/vite-vue3-tailwind-starter/discussions/113) (dev notes)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - recommended (instead of Vetur) VSCode extension built specifically for Vue 3
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - recommended VSCode extension built specifically for Vue 3 (instead of Vetur)
 - [Pinia](https://pinia.esm.dev/introduction.html) - state-management alternative to Vuex 4 with a similar to upcoming Vuex 5 API
 - [VueUse](https://vueuse.org/functions.html) - collection of essential Vue Composition Utilities
