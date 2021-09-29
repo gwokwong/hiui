@@ -21,6 +21,6 @@
     "@types/tailwindcss": "^2.2.1",
     "tailwindcss": "^2.2.16",
     "@vitejs/plugin-vue": "^1.9.2",
-    "vite": "^2.5.10"
+    "vite": "^2.6.0"
   }
 }
