@@ -4,7 +4,7 @@
 
 This starter template also includes:
 
-- [Tailwind CSS v3.0.0-alpha ⚠](https://tailwindcss.com/docs/just-in-time-mode)
+- [Tailwind CSS v3.0.0-alpha ⚠](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.0.0-alpha.1)
 - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
 - [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
 - [Headless UI](https://headlessui.dev/vue/menu) - unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
