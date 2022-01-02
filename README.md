@@ -5,7 +5,7 @@
 This starter template includes:
 
 - [Vite](https://vitejs.dev/guide/)
-- [Vue 3](https://v3.vuejs.org/guide/introduction.html)
+- [Vue 3](https://staging.vuejs.org/guide/introduction.html)
 - [Tailwind CSS v3](https://tailwindcss.com/docs/configuration)
 - [Vue Router v4](https://github.com/vuejs/vue-router-next)
 - [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
