@@ -5,9 +5,9 @@
 This starter template includes:
 
 - [Vite](https://vitejs.dev/guide/)
-- [Vue 3](https://staging.vuejs.org/guide/introduction.html)
+- [Vue 3](https://vuejs.org/guide/introduction.html)
 - [Tailwind CSS v3](https://tailwindcss.com/docs/configuration)
-- [Vue Router v4](https://github.com/vuejs/vue-router-next)
+- [Vue Router v4](https://github.com/vuejs/router)
 - [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
 - [Headless UI](https://headlessui.dev/vue/menu) - unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS
 - [Heroicons](https://github.com/tailwindlabs/heroicons#vue) - beautiful hand-crafted SVG icons,
