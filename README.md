@@ -21,6 +21,12 @@ First-party plugins needed for Tailwind UI:
 - [tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)
 - [tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
 
+Unplugin Utilities:
+
+- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - on-demand components auto importing
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - on-demand auto import most used APIs
+- [unplugin-vue-router](https://github.com/posva/unplugin-vue-router) - file based routing for vue-router
+
 ### Getting Started
 
 ```sh
