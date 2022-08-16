@@ -6,6 +6,12 @@
 }
 </route>
 
+<script setup>
+useHead({
+  title: 'Home',
+})
+</script>
+
 <template>
   <div class="bg-gray-50">
     <div
