@@ -12,7 +12,6 @@ export default defineConfig({
     VueRouter(),
     Components({ resolvers: [HeadlessUiResolver()] }),
     AutoImport({
-      include: [/\.vue$/, /\.js$/],
       imports: ['vue', '@vueuse/head', { 'vue-router/auto': VueRouterExports }],
     }),
   ],

@@ -13,4 +13,4 @@ const router = createRouter({
 
 app.use(router)
 app.use(head)
-app.mount('#app')
+app.mount(document.body)
