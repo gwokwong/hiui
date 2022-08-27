@@ -12,7 +12,7 @@ This starter template includes:
 - [TypeScript](https://vuejs.org/guide/typescript/overview.html) - write vue files as `<script setup>` or `<script setup lang="ts">`
 - [Inter var font](https://github.com/rsms/inter) (self-hosted, woff2, v3.19, with 'preload' attr, check out index.html)
 - [Headless UI](https://headlessui.com/vue/menu) - unstyled UI components, designed to integrate beautifully with Tailwind CSS
-- [Heroicons](https://github.com/tailwindlabs/heroicons#vue) - beautiful hand-crafted SVG icons,
+- [Heroicons](https://github.com/tailwindlabs/heroicons) - beautiful hand-crafted SVG icons,
   by the makers of Tailwind CSS
 - [prettier-plugin-tailwindcss](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier) - automatic class sorting with Prettier
 
