@@ -1,5 +1,15 @@
+<route lang="json">
+{
+  "meta": {
+    "title": "Home"
+  }
+}
+</route>
+
 <script setup>
-import ButtonRepo from '@/components/ButtonRepo.vue'
+useHead({
+  title: 'Home',
+})
 </script>
 
 <template>

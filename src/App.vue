@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 let counter = ref(0)
 
 setInterval(() => {
@@ -15,6 +13,7 @@ setInterval(() => {
         <h1
           @click="counter = 0"
           class="text-3xl font-bold leading-tight text-gray-900"
+          title="click to reset a counter"
         >
           {{ $route.meta.title }} / {{ counter }}
         </h1>
