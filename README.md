@@ -1,4 +1,4 @@
-# HiUi - An web ui framework by Hitosea
+# HiUi - A web ui framework by Hitosea
 
 ![Hitosea](https://www.hitosea.com/images/logo.svg)
 
