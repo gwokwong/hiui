@@ -2,9 +2,9 @@
   "name": "vite-vue3-tailwind-starter",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "dev": "yarn vite --host",
+    "build": "yarn vue-tsc --noEmit && vite build",
+    "serve": "yarn vite preview"
   },
   "dependencies": {
     "@vueuse/head": "^0.7.9",
