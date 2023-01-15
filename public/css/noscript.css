@@ -1,0 +1,99 @@
+.noscript-content {
+    width: 650px;
+    margin: 50px auto;
+    font-size: 14px;
+    color: #999;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Microsoft Yahei", sans-serif;
+}
+
+.noscript-content .highlight {
+    color: rgb(0, 80, 249);
+}
+
+.noscript-content .pic-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.noscript-content .pic-box p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #61666D;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.noscript-content .pic-box .pic-box-logo {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+.noscript-content .pic-box .center-title {
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 0 12px 0;
+}
+
+.noscript-content .text-box .title {
+    text-align: center;
+    margin: 40px 0 25px 0;
+    position: relative;
+}
+
+.noscript-content .text-box .title-line {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: #F1F2F3;
+    margin-top: -10px;
+}
+
+.noscript-content .text-box .list {
+    height: 90px;
+}
+
+.noscript-content .text-box .list ul {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+
+.noscript-content .text-box .list li {
+    height: fit-content;
+    background: #F1F2F3;
+    border-radius: 8px;
+    width: 88px;
+    margin-right: 8px;
+    padding: 20px 0;
+    display: flex;
+    transition: 0.3s;
+}
+
+.noscript-content .text-box .list li:hover {
+    background: #E3E5E7;
+}
+
+.noscript-content .text-box .list li a {
+    float: left;
+    width: 100px;
+    text-align: center;
+    line-height: 24px;
+    color: #666;
+    text-decoration: none;
+}
+
+.noscript-content .text-box .list li a span {
+    font-size: 12px;
+    color: #999;
+}
+
+.noscript-content .copyright {
+    margin-top: 60px;
+    text-align: center;
+}
