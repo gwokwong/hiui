@@ -1,8 +1,8 @@
-# Vite, Vue3, Tailwind CSS (single-page app)
+# HiUi - An web ui framework by Hitosea
 
-![Vite, Vue, Tailwind CSS](https://user-images.githubusercontent.com/11320080/111277027-a9384c00-8640-11eb-8323-21889bd7c609.png)
+![Hitosea](https://www.hitosea.com/images/logo.svg)
 
-This starter template includes:
+This project is using open source projects below:
 
 - [Vite 3](https://vitejs.dev/guide/)
 - [Vue 3](https://vuejs.org/guide/introduction.html)
@@ -31,16 +31,11 @@ Unplugin Utilities:
 
 ### Getting Started
 
-```sh
-npx degit web2033/vite-vue3-tailwind-starter vvt-app
-cd vvt-app
-```
+recommended to use [yarn](https://yarnpkg.org/) as package manager
 
 ```sh
-npm i
-npm run dev
-npm run build
-npm run serve
+yarn i
+yarn dev
+yarn build
+yarn serve
 ```
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/web2033/vite-vue3-tailwind-starter)
