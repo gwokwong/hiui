@@ -1,14 +1,6 @@
-<route lang="json">
-{
-  "meta": {
-    "title": "Home"
-  }
-}
-</route>
-
 <script setup>
 useHead({
-  title: 'Home',
+  title: 'About',
 })
 </script>
 
@@ -20,16 +12,16 @@ useHead({
       <h2
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
-        Ready to dive in? <el-button> {{ $t("test") }} </el-button>
+        About Page
         <br />
         <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <router-link
-            to="/about"
+            to="/"
             class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
-            >Next Page</router-link
+            >Back Home</router-link
           >
         </div>
         <ButtonRepo />

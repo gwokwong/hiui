@@ -1,23 +1,15 @@
 <template>
-  <div>
-    <header class="bg-white shadow" v-if="$route.meta.title">
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1
-          @click="counter = 0"
-          class="text-3xl font-bold leading-tight text-gray-900"
-          title="click to reset a counter"
-        >
-          {{ $route.meta.title }} / {{ counter }}
-        </h1>
-      </div>
-    </header>
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <router-view v-if="$router.meta?.notUseLayout" v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component"></component>
+    </keep-alive>
+  </router-view>
+  <main-layout v-else></main-layout>
 </template>
 
 <script setup>
+import MainLayout from "@/layout/mainLayout.vue";
+
 let counter = ref(0)
 // const locale = localStorage.getItem('lang') || "zh_CN"
 
