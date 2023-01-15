@@ -6,6 +6,7 @@ This project is using open source projects below:
 
 - [Vite 3](https://vitejs.dev/guide/)
 - [Vue 3](https://vuejs.org/guide/introduction.html)
+- [SASS](https://sass-lang.com)
 - [Tailwind CSS 3](https://tailwindcss.com/docs/configuration)
 - [Vue Router](https://github.com/vuejs/router)
 - [@vueuse/head](https://github.com/vueuse/head) - document head manager

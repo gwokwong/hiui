@@ -1,11 +1,3 @@
-<script setup>
-let counter = ref(0)
-
-setInterval(() => {
-  counter.value++
-}, 1000)
-</script>
-
 <template>
   <div>
     <header class="bg-white shadow" v-if="$route.meta.title">
@@ -24,3 +16,13 @@ setInterval(() => {
     </main>
   </div>
 </template>
+
+<script setup>
+let counter = ref(0)
+// const locale = localStorage.getItem('lang') || "zh_CN"
+
+setInterval(() => {
+  counter.value++
+}, 1000)
+
+</script>
