@@ -1,5 +1,5 @@
 <template>
-  <router-view v-if="$router.meta?.notUseLayout" v-slot="{ Component }">
+  <router-view v-if="$route.meta?.notUseLayout" v-slot="{ Component }">
     <keep-alive>
       <component :is="Component"></component>
     </keep-alive>

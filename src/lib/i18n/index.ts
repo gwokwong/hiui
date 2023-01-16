@@ -8,10 +8,9 @@ interface I18nOptions {
     locale: string
 }
 
-export const LOCALE_OPTIONS = [
-    { label: '中文(简体)', value: 'zh_CN' },
-    { label: 'English', value: 'en_US' },
-]
+export const LOCALE_OPTIONS = new Map()
+LOCALE_OPTIONS.set("zh_CN", "中文(简体)")
+LOCALE_OPTIONS.set("en_US", "English")
 
 const defaultLocale = localStorage.getItem('lang') || 'zh_CN';
 

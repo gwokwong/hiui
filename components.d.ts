@@ -8,8 +8,20 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ButtonRepo: typeof import('./src/components/ButtonRepo.vue')['default']
+    ElBadge: typeof import('element-plus/es')['ElBadge']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElDropdown: typeof import('element-plus/es')['ElDropdown']
+    ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElLink: typeof import('element-plus/es')['ElLink']
+    ElPopover: typeof import('element-plus/es')['ElPopover']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    GlobalHeader: typeof import('./src/components/globalHeader/globalHeader.vue')['default']
+    HeaderRightButton: typeof import('./src/components/globalHeader/headerRightButton.vue')['default']
+    ItalicTitle: typeof import('./src/components/italicTitle.vue')['default']
+    Redirect: typeof import('./src/components/redirect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SideNavigationBar: typeof import('./src/components/sideNavigationBar.vue')['default']
   }
 }

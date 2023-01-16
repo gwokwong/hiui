@@ -1,8 +1,10 @@
 import type {RouteRecordRaw} from "vue-router/auto"
 
 import Home from "@/views/index.vue"
+
 const About = () => import("@/views/about.vue")
 const Login = () => import("@/views/user/login.vue")
+const Redirect = () => import("@/components/redirect.vue")
 const NotFound = () => import("@/views/[...404].vue")
 
 /** @type {import('vue-router/auto').RouterOptions['routes']} */
@@ -24,7 +26,8 @@ export const routes: RouteRecordRaw[] = [
         name: 'About',
         component: About,
         meta: {
-            title: "About"
+            title: "About",
+            notUseLayout: true
         }
     },
     {
@@ -36,6 +39,11 @@ export const routes: RouteRecordRaw[] = [
             requiresAuth: false,
             notUseLayout: true
         }
+    },
+    {
+        path: '/redirect/:path(.*)',
+        name: 'Redirect',
+        component: Redirect,
     },
     {
         path: '/:pathMatch(.*)*',
