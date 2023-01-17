@@ -1,0 +1,15 @@
+export default {
+    'globalHeader.language': 'Switch language',
+    'globalHeader.darkMode.changeLightOrDark': 'Change light/dark mode',
+    'globalHeader.darkMode.light': 'Light',
+    'globalHeader.darkMode.dark': 'Dark',
+    'globalHeader.darkMode.auto': 'System',
+    'globalHeader.settings': 'Settings',
+    'globalHeader.notifications': 'Notifications',
+    'globalHeader.user.profile': 'Profile',
+    'globalHeader.user.security': 'Security',
+    'globalHeader.user.logout': 'Log out',
+    'sideNav.dashboard': 'Dashboard',
+    'sideNav.settings': 'Settings',
+    'sideNav.profile': 'profile',
+}

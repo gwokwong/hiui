@@ -1,0 +1,15 @@
+export default {
+    'globalHeader.language': '切换语言',
+    'globalHeader.darkMode.changeLightOrDark': '切换深/浅色模式',
+    'globalHeader.darkMode.light': '浅色模式',
+    'globalHeader.darkMode.dark': '深色模式',
+    'globalHeader.darkMode.auto': '跟随系统',
+    'globalHeader.settings': '系统设置',
+    'globalHeader.notifications': '系统通知',
+    'globalHeader.user.profile': '用户信息',
+    'globalHeader.user.security': '账户安全',
+    'globalHeader.user.logout': '退出登录',
+    'sideNav.dashboard': '仪表盘',
+    'sideNav.settings': '设置',
+    'sideNav.profile': '个人信息',
+}

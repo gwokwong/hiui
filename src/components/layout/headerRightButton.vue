@@ -1,7 +1,8 @@
 <template>
   <el-popover>
     <template #reference>
-      <el-button class="header-btn" @click="item.click" circle>
+      <el-button class="header-btn" @click="$emit('click')" circle>
+<!--      <el-button class="header-btn" @click="item.click" circle>-->
         <el-badge
             is-dot
             :hidden="item.name !== 'notifications' || notificationCounts === 0"
@@ -17,7 +18,7 @@
         <div class="button-menu" v-if="useDropdown">
           <el-button text plain v-for="btnItem in item.dropdowns" @click="btnItem.click">
             <font-awesome-icon v-if="!!btnItem?.icon" :icon="btnItem?.icon"/>
-            <span>{{ $t(btnItem.name) }}</span>
+            <span>{{ item.name === 'language' ? btnItem.name : $t(btnItem.name) }}</span>
           </el-button>
         </div>
         <p style="text-align: center" v-else>

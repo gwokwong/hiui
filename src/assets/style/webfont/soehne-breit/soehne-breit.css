@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "sbt";
+    src: url("./webfont/soehne-breit-test-leicht.woff") format("woff");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "sbt";
+    src: url("./webfont/soehne-breit-test-kraftig.woff") format("woff");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "sbt";
+    src: url("./webfont/soehne-breit-test-halbfett.woff") format("woff");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "sbt";
+    src: url("./webfont/soehne-breit-test-dreiviertelfett.woff") format("woff");
+    font-weight: 600;
+}

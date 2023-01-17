@@ -1,4 +1,5 @@
-# HiUi - A web ui framework by Hitosea
+# HiUI
+### a frontend web framework by Hitosea, based on Vue3, Vite, TailwindCSS & Element-Plus
 
 ![Hitosea](https://www.hitosea.com/images/logo.svg)
 
@@ -7,7 +8,8 @@ This project is using open source projects below:
 - [Vite 3](https://vitejs.dev/guide/)
 - [Vue 3](https://vuejs.org/guide/introduction.html)
 - [SASS](https://sass-lang.com)
-- [Tailwind CSS 3](https://tailwindcss.com/docs/configuration)
+- [Tailwind CSS 3](https://tailwindcss.com/docs)
+- [Tailwind CSS 3 Chinese Docs](https://tailwindcss.cn/docs)
 - [Vue Router](https://github.com/vuejs/router)
 - [@vueuse/head](https://github.com/vueuse/head) - document head manager
 - [TypeScript](https://vuejs.org/guide/typescript/overview.html) - write vue files as `<script setup>` or `<script setup lang="ts">`

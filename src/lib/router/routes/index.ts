@@ -1,8 +1,7 @@
 import type {RouteRecordRaw} from "vue-router/auto"
 
-import Home from "@/views/index.vue"
+import Dashboard from "@/views/index.vue"
 
-const About = () => import("@/views/about.vue")
 const Login = () => import("@/views/user/login.vue")
 const Redirect = () => import("@/components/redirect.vue")
 const NotFound = () => import("@/views/[...404].vue")
@@ -11,23 +10,14 @@ const NotFound = () => import("@/views/[...404].vue")
 export const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/home'
+        redirect: '/dashboard'
     },
     {
-        path: '/home',
-        name: 'Home',
-        component: Home,
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: Dashboard,
         meta: {
-            title: "Home"
-        }
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About,
-        meta: {
-            title: "About",
-            notUseLayout: true
+            title: "routes.home"
         }
     },
     {
@@ -35,19 +25,29 @@ export const routes: RouteRecordRaw[] = [
         name: 'Login',
         component: Login,
         meta: {
-            title: "Login",
+            title: "routes.login",
             requiresAuth: false,
             notUseLayout: true
         }
     },
-    {
-        path: '/redirect/:path(.*)',
-        name: 'Redirect',
-        component: Redirect,
-    },
+    // {
+    //     path: '/redirect/:path',
+    //     redirect: to => {
+    //         return { path: '/redirect', query: { path: to.params.path } }
+    //     }
+    // },
+    // {
+    //     path: '/redirect',
+    //     name: 'Redirect',
+    //     component: Redirect,
+    // },
     {
         path: '/:pathMatch(.*)*',
         name: 'notFound',
         component: NotFound,
+        meta: {
+            title: "routes.notFound",
+            requiresAuth: false,
+        }
     }
 ]
