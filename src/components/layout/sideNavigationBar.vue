@@ -23,7 +23,7 @@
       </el-menu>
     </div>
     <div class="nav__version">
-      <span>V1.0.0</span>
+      <span>V{{ appVersion }}</span>
     </div>
     <el-button id="navCollapseBtn" @click="emit('sideBarCollapse')" circle plain>
       <font-awesome-icon icon="fa-solid fa-chevron-left" :rotation="isNavCollapsed ? '180' : '0'"/>
@@ -38,7 +38,7 @@ import {useRoute} from "vue-router"
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
-const { isNavCollapsed } = storeToRefs(_app)
+const { isNavCollapsed, appVersion } = storeToRefs(_app)
 const route = useRoute()
 
 const emit = defineEmits(['sideBarCollapse'])

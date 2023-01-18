@@ -12,6 +12,7 @@ export const useAppStore = defineStore('app', () => {
     const isDarkMode = ref(false)
     const isNavCollapsed: Ref<boolean> = ref(false)
     const isNotificationsDialogShown: Ref<boolean> = ref(false)
+    const appVersion = ref(import.meta.env.VITE_APP_VERSION)
     // getters
 
     // actions
@@ -23,6 +24,7 @@ export const useAppStore = defineStore('app', () => {
         isDarkMode,
         isNavCollapsed,
         isNotificationsDialogShown,
+        appVersion,
         setIsDarkMode,
     }
 })

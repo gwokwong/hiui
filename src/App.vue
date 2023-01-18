@@ -20,7 +20,7 @@ const { isDarkMode } = storeToRefs(_app)
 /**
  * @function setDarkMode
  * @description 设置深色/浅色模式
- * @param {string | boolean | MediaQueryList} e - 模式，可选值：'dark' | 'light' | 'auto',
+ * @param {string} e - 模式，可选值：'dark' | 'light' | 'auto',
  * 如为boolean类型，为true时为dark，false时为light
  * */
 function setDarkMode(e) {
@@ -56,6 +56,8 @@ function darkModeHandler(mode = 'auto') {
   setDarkMode(mode)
   window.matchMedia('(prefers-color-scheme: dark)')
       .removeEventListener('change', () => darkModeHandler('auto'))
+
+  localStorage.setItem('darkMode', mode)
 }
 
 function init() {
