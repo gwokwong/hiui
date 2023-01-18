@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElPopover: typeof import('element-plus/es')['ElPopover']
+    ElTag: typeof import('element-plus/es')['ElTag']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     GlobalHeader: typeof import('./src/components/layout/globalHeader.vue')['default']
     HeaderRightButton: typeof import('./src/components/layout/headerRightButton.vue')['default']
@@ -26,5 +27,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideNavigationBar: typeof import('./src/components/layout/sideNavigationBar.vue')['default']
+    TopNotifications: typeof import('./src/components/layout/topNotifications.vue')['default']
   }
 }

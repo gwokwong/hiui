@@ -25,6 +25,7 @@
             :item="item"
             @click="headerRightBtnClick(item.event)"
             :use-dropdown="item?.dropdowns?.length > 0"
+            :use-notifications="item.name === 'notifications'"
         ></HeaderRightButton>
       </div>
     </div>
@@ -43,7 +44,7 @@ import {storeToRefs} from 'pinia'
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
-const {isNavCollapsed, isDarkMode} = storeToRefs(_app)
+const {isNavCollapsed, isDarkMode, appNotifications} = storeToRefs(_app)
 
 const router = useRouter()
 const route = useRoute()
@@ -96,6 +97,14 @@ let userImg = ref(null)
 
 const extendFunctions = reactive([
   {
+    icon: 'fa-solid fa-bell',
+    name: 'notifications',
+    tips: 'globalHeader.notifications',
+    notificationCounts: 0,
+    notificationContents: [...appNotifications.value]
+    // event: 'notificationShow'
+  },
+  {
     icon: 'fa-solid fa-earth-asia',
     name: 'language',
     // tips: 'language',
@@ -144,13 +153,6 @@ const extendFunctions = reactive([
     icon: 'fa-solid fa-sliders',
     name: 'settings',
     tips: 'globalHeader.settings'
-  },
-  {
-    icon: 'fa-solid fa-bell',
-    name: 'notifications',
-    tips: 'globalHeader.notifications',
-    notificationCounts: 0,
-    event: 'notificationShow'
   },
   {
     icon: userImg,

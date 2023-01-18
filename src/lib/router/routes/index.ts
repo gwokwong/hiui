@@ -3,7 +3,7 @@ import type {RouteRecordRaw} from "vue-router/auto"
 import Dashboard from "@/views/index.vue"
 
 const Login = () => import("@/views/user/login.vue")
-const Redirect = () => import("@/components/redirect.vue")
+// const Redirect = () => import("@/components/redirect.vue")
 const NotFound = () => import("@/views/[...404].vue")
 
 /** @type {import('vue-router/auto').RouterOptions['routes']} */

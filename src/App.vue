@@ -12,6 +12,13 @@ import MainLayout from "@/layout/mainLayout.vue"
 import {ElLoading} from "element-plus"
 import {useAppStore} from "@/lib/store/appStore"
 import {storeToRefs} from 'pinia'
+import i18n from "@/lib/i18n"
+import {useTitle} from "@vueuse/core"
+import {useRoute} from "vue-router"
+
+const appStore = useAppStore()
+const { appName, appLocale } = storeToRefs(appStore)
+const route = useRoute()
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
@@ -37,7 +44,6 @@ function setDarkMode(e) {
   }
 }
 
-// const ctx = getCurrentInstance()
 /**
  * @function darkModeHandler
  * @description 切换深色/浅色模式，或者跟随系统
@@ -60,22 +66,36 @@ function darkModeHandler(mode = 'auto') {
   localStorage.setItem('darkMode', mode)
 }
 
+/**
+ * @function init
+ * @description 初始化
+ * */
 function init() {
+  // 加载界面
   // TODO: 改为自用的 loading
   const loading = ElLoading.service({
     lock: true,
     text: "loading",
-    background: "rgba(0, 0, 0, 0.7)",
+    background: "rgba(0, 0, 0, 0.25)",
   })
   setTimeout(() => {
     loading.close()
   }, 2000)
 
+  // 设置深色模式
   const darkMode = localStorage.getItem('darkMode')
   darkModeHandler(darkMode)
 }
 
 init()
+
+onMounted(() => {
+  console.log('i18n', i18n, i18n.global, i18n.global?.t(route.meta?.title))
+  // @ts-ignore
+  const translatedTitle = i18n.global?.t(route.meta?.title, appLocale.value)
+  const splicedTitle = `${translatedTitle} - ${appName.value}`
+  useTitle(splicedTitle)
+})
 
 watch(() => isDarkMode.value, val => {
   setDarkMode(val)

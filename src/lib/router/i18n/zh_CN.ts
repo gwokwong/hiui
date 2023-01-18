@@ -1,5 +1,5 @@
 export default {
     'routes.home': '仪表盘',
-    'routes.login': 'Sign in',
-    'routes.notFound': '404 Page Not Found',
+    'routes.login': '登录',
+    'routes.notFound': '404页面不存在',
 }

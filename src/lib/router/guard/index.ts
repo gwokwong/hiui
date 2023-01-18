@@ -3,6 +3,7 @@ import type { Router } from 'vue-router'
 import NProgress from "nprogress"
 import '@/assets/style/nprogress.css'
 
+
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
 function setupPageGuard(context: Router) {
@@ -12,7 +13,7 @@ function setupPageGuard(context: Router) {
         next();
     })
 
-    context.afterEach(() => {
+    context.afterEach((to) => {
         NProgress.done()
     })
 }

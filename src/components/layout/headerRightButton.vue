@@ -1,5 +1,5 @@
 <template>
-  <el-popover>
+  <el-popover width="fit-content">
     <template #reference>
       <el-button class="header-btn" @click="$emit('click')" circle>
 <!--      <el-button class="header-btn" @click="item.click" circle>-->
@@ -21,6 +21,13 @@
             <span>{{ item.name === 'language' ? btnItem.name : $t(btnItem.name) }}</span>
           </el-button>
         </div>
+        <top-notifications
+            v-else-if="useNotifications"
+            :unread-count="item.notificationCounts"
+            :content="item.notificationContents"
+        >
+          {{ $t(item.tips) }}
+        </top-notifications>
         <p style="text-align: center" v-else>
           {{ $t(item.tips) }}
         </p>
@@ -30,7 +37,9 @@
 </template>
 
 <script setup>
-const props = defineProps(['item', 'useDropdown'])
+import TopNotifications from "@/components/layout/topNotifications.vue"
+
+const props = defineProps(['item', 'useDropdown', 'useNotifications'])
 
 let icon = ref(props.item.icon)
 let notificationCounts = ref(props.item.notificationCounts)
