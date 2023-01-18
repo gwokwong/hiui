@@ -5,6 +5,8 @@
 :root {
   --side-bar-width: 260px;
   --global-header-height: 64px;
+  --router-view-padding: 32px;
+  --router-view-content-height: calc(100vh - var(--global-header-height) - (var(--router-view-padding) * 2));
 }
 
 :root[data-nav-collapse="true"] {

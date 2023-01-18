@@ -12,4 +12,5 @@ export default {
     'sideNav.dashboard': '仪表盘',
     'sideNav.settings': '设置',
     'sideNav.profile': '个人信息',
+    'sideNav.VFormDesigner': 'VForm设计器',
 }

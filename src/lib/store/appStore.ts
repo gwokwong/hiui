@@ -16,6 +16,28 @@ export const useAppStore = defineStore('app', () => {
     const appVersion = ref(import.meta.env.VITE_APP_VERSION)
     const appName = ref(import.meta.env.VITE_APP_NAME)
     const appLocale = ref(useStorage('appLocale', 'zh_CN'))
+    const appSideBarItems = reactive([
+        {
+            name: 'Dashboard',
+            icon: 'fa-solid fa-chart-line',
+            title: 'sideNav.dashboard'
+        },
+        {
+            name: 'Settings',
+            icon: 'fa-solid fa-sliders',
+            title: 'sideNav.settings'
+        },
+        {
+            name: 'Profile',
+            icon: 'fa-solid fa-user',
+            title: 'sideNav.profile'
+        },
+        {
+            name: 'Designer',
+            icon: 'fa-solid fa-grip',
+            title: 'sideNav.VFormDesigner'
+        },
+    ])
     const appNotifications = reactive([
         {
             content: 'This is a test notification, id: 0',
@@ -60,6 +82,7 @@ export const useAppStore = defineStore('app', () => {
         appVersion,
         appName,
         appLocale,
+        appSideBarItems,
         appNotifications,
         setIsDarkMode,
     }

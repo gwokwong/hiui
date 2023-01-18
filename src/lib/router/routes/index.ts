@@ -4,6 +4,8 @@ import Dashboard from "@/views/index.vue"
 
 const Login = () => import("@/views/user/login.vue")
 // const Redirect = () => import("@/components/redirect.vue")
+const VFormDesigner = () => import("@/views/vForm/designer.vue")
+const VFormRender = () => import("@/views/vForm/components/vFormRender.vue")
 const NotFound = () => import("@/views/[...404].vue")
 
 /** @type {import('vue-router/auto').RouterOptions['routes']} */
@@ -28,6 +30,30 @@ export const routes: RouteRecordRaw[] = [
             title: "routes.login",
             requiresAuth: false,
             notUseLayout: true
+        }
+    },
+    {
+        path: '/designer',
+        name: 'VFormDesigner',
+        component: VFormDesigner,
+        meta: {
+            title: "routes.vFormDesigner",
+            requiresAuth: false,
+            notUseLayout: false
+        }
+    },
+    {
+        path: '/form',
+        name: 'VFormRenderParent',
+        redirect: {name: 'notFound'},
+    },
+    {
+        path: '/form/:id',
+        name: 'VFormRender',
+        component: VFormRender,
+        meta: {
+            requiresAuth: true,
+            notUseLayout: false
         }
     },
     // {

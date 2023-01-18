@@ -12,7 +12,7 @@
     </nav>
 
     <div class="router-view">
-      <div class="router-view__content">
+      <div class="router-view__content" :data-is-designer="$route.name === 'VFormDesigner'">
         <router-view v-slot="{ Component }">
           <keep-alive>
             <component :is="Component"></component>
@@ -111,12 +111,18 @@ main {
   @apply bg-gradient-to-br from-theme-400 via-theme-500 to-theme-600;
   height: available;
   width: calc(100vw - var(--side-bar-width));
-  padding: 32px;
+  padding: var(--router-view-padding);
   transition: width 0s;
 }
 
 .router-view__content {
-  @apply w-full h-full p-10 bg-content shadow-2xl rounded-xl;
+  @apply w-full p-10 bg-content shadow-2xl rounded-xl;
+  height: var(--router-view-content-height);
+  overflow-y: scroll;
   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.router-view__content[data-is-designer="true"] {
+  @apply p-1;
 }
 </style>

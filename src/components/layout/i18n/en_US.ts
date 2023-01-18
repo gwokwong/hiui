@@ -12,4 +12,5 @@ export default {
     'sideNav.dashboard': 'Dashboard',
     'sideNav.settings': 'Settings',
     'sideNav.profile': 'profile',
+    'sideNav.VFormDesigner': 'VForm Designer',
 }

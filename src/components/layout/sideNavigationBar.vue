@@ -9,11 +9,12 @@
 <!--        @open="handleOpen"-->
 <!--        @close="handleClose"-->
         <el-menu-item
-            v-for="(item, sideMenuKey) in sideMenuItems"
+            v-for="(item, sideMenuKey) in appSideBarItems"
             :key="sideMenuKey"
             :index="item.name"
             :data-active="route.name === item.name"
             :data-nav-collapse="isNavCollapsed"
+            @click="$router.push({name: item.name})"
         >
           <font-awesome-icon :icon="item.icon"/>
           <span :data-nav-collapse="isNavCollapsed">
@@ -38,7 +39,7 @@ import {useRoute} from "vue-router"
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
-const { isNavCollapsed, appVersion } = storeToRefs(_app)
+const { isNavCollapsed, appVersion, appSideBarItems } = storeToRefs(_app)
 const route = useRoute()
 
 const emit = defineEmits(['sideBarCollapse'])
@@ -48,31 +49,15 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import {
   faChartLine,
   faChevronLeft,
+  faGrip,
 } from "@fortawesome/free-solid-svg-icons"
 const fontawesomeIcons = [
   faChartLine,
-  faChevronLeft
+  faChevronLeft,
+  faGrip,
 ]
 fontawesomeIcons.forEach(icon => library.add(icon))
 /* Fontawesome 图标引入 end */
-
-const sideMenuItems = reactive([
-  {
-    name: 'Dashboard',
-    icon: 'fa-solid fa-chart-line',
-    title: 'sideNav.dashboard'
-  },
-  {
-    name: 'Settings',
-    icon: 'fa-solid fa-sliders',
-    title: 'sideNav.settings'
-  },
-  {
-    name: 'Profile',
-    icon: 'fa-solid fa-user',
-    title: 'sideNav.profile'
-  }
-])
 
 // function handleOpen(key: string, keyPath: string[]) {
 //   // TODO: Do something

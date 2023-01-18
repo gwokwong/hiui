@@ -24,6 +24,9 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  optimizeDeps: {
+    include: ['@/../lib/vform3/designer.umd']
+  },
   server: {
     open: true,
   },
