@@ -258,6 +258,7 @@ watch(() => route.meta?.title, (val) => {
         transition: width 0.3s cubic-bezier(1, 0, 0, 1);
 
         .header__logo-text {
+          // font-sbt == 自定义字体soehne-breit
           @apply mx-auto font-sbt font-bold text-2xl text-white overflow-hidden;
           height: 2rem;
           overflow-wrap: anywhere;

@@ -5,6 +5,8 @@
     </keep-alive>
   </router-view>
   <main-layout v-else @toggleDarkMode="darkModeHandler"></main-layout>
+
+  <LoadingMask :visibility="isAppLoading"></LoadingMask>
 </template>
 
 <script setup>
@@ -22,7 +24,7 @@ const route = useRoute()
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
-const { isDarkMode } = storeToRefs(_app)
+const { isAppLoading, isDarkMode } = storeToRefs(_app)
 
 /**
  * @function setDarkMode
@@ -71,17 +73,12 @@ function darkModeHandler(mode = 'auto') {
  * @description 初始化
  * */
 function init() {
-  // 加载界面
-  // TODO: 改为自用的 loading
-  const loading = ElLoading.service({
-    lock: true,
-    text: "loading",
-    background: "rgba(0, 0, 0, 0.25)",
-  })
-  setTimeout(() => {
-    loading.close()
-  }, 2000)
-
+  // 加载画面
+  // TODO: 接入加载信息API
+  const timer = setTimeout(() => {
+    isAppLoading.value = false
+    clearTimeout(timer)
+  }, 2500)
   // 设置深色模式
   const darkMode = localStorage.getItem('darkMode')
   darkModeHandler(darkMode)

@@ -3,7 +3,6 @@
     <div class="nav__menu">
       <el-menu
           default-active="Dashboard"
-          class="el-menu-vertical-demo"
           router
       >
 <!--        @open="handleOpen"-->
@@ -106,7 +105,7 @@ fontawesomeIcons.forEach(icon => library.add(icon))
 
     .el-menu-item {
       border-radius: 5px;
-      transition: all 0.3s linear;
+      transition: all 0.3s ease;
       transition-delay: 0s;
 
       svg, img {

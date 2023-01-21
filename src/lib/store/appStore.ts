@@ -10,6 +10,7 @@ import {useStorage} from "@vueuse/core"
 
 export const useAppStore = defineStore('app', () => {
     // state
+    const isAppLoading = ref(true)
     const isDarkMode = ref(false)
     const isNavCollapsed: Ref<boolean> = ref(false)
     const isNotificationsDialogShown: Ref<boolean> = ref(false)
@@ -76,6 +77,7 @@ export const useAppStore = defineStore('app', () => {
     }
     // 摞上面定义的冚棒唥return出去
     return {
+        isAppLoading,
         isDarkMode,
         isNavCollapsed,
         isNotificationsDialogShown,
