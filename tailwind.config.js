@@ -27,6 +27,7 @@ module.exports = {
       },
       backgroundColor: {
         'content': 'var(--color-content-bg)',
+        'theme': 'var(--color-primary)',
       },
     },
   },

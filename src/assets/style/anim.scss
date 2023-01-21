@@ -1,6 +1,26 @@
-.infiniteRotation {
-  animation: infiniteRotation 2s linear infinite;
+.anim__infinite-rotation {
+  animation: Rotation 2s ease infinite;
 }
+
+.anim__width-and-height-to-full {
+  animation: widthAndHeightToFull 2s ease infinite;
+}
+
+.anim__width-to-full {
+  animation: widthToFull 2s ease infinite;
+}
+
+.anim__height-to-full {
+  animation: heightToFull 2s ease infinite;
+}
+
+.anim__hide {
+  animation: Hide 1s ease forwards;
+}
+
+//.anim__delay-3q4 {
+//  animation-delay: 0.75s;
+//}
 
 @keyframes Rotation {
     from {
@@ -8,5 +28,65 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes widthAndHeightToFull {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 100%;
+        height: 100%;
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes widthToFull {
+    from {
+        width: 0;
+    }
+
+    40% {
+        width: 0;
+    }
+
+    to {
+        width: 101%;
+    }
+}
+
+@keyframes heightToFull {
+    from {
+        height: 0;
+    }
+
+    40% {
+        height: 0;
+    }
+
+    to {
+        height: 101%;
+    }
+}
+
+@keyframes Hide {
+    0% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        touch-action: none;
+        pointer-events: none;
     }
 }
