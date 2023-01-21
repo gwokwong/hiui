@@ -2,7 +2,13 @@
   <div class="top-notifications">
     <div class="top-notifications__title">
       <slot></slot>
-      <el-tag size="small" type="danger">{{ unreadCount }}</el-tag>
+      <div class="top-notifications__func">
+        <el-tag size="small" type="danger">{{ unreadCount }}</el-tag>
+        <el-button size="small" :icon="Delete">
+
+          清空
+        </el-button>
+      </div>
     </div>
     <div
         class="top-notifications__item"
@@ -10,9 +16,11 @@
         :key="contentKey"
     >
       <img :src="iconMap.get(contentItem.icon)" alt width="48" height="48">
-      <div class="top-notifications__content">
-        <span>{{ contentItem.title }}</span>
-        <span>{{ contentItem.time }}</span>
+      <div class="notification__content">
+        <div class="notification__top">
+          <span class="notification__title">{{ contentItem.title }}</span>
+          <span class="notification__time">{{ contentItem.time }}</span>
+        </div>
         <span>{{ contentItem.content }}</span>
       </div>
     </div>
@@ -22,6 +30,7 @@
 <script setup>
 import {onMounted} from "vue"
 import {lazyImg} from "@/lib/utils/lazyImg"
+import {Delete} from '@element-plus/icons-vue'
 
 const iconList = [
   {
@@ -59,13 +68,29 @@ onMounted(async () => {
 
   .top-notifications__title {
     @apply w-full pb-[10px] flex flex-row justify-between border-b;
+
+    .top-notifications__func > button {
+      @apply ml-2;
+    }
   }
 
   .top-notifications__item {
     @apply w-full min-h-[100px] py-[20px] flex flex-row justify-start items-center;
 
-    .top-notifications__content {
-      @apply mx-[5px] flex flex-col justify-start items-start;
+    .notification__content {
+      @apply w-full mx-[5px] flex flex-col justify-start items-start self-start;
+    }
+
+    .notification__top {
+      @apply w-full flex justify-between;
+
+      .notification__title {
+        @apply font-bold text-black;
+      }
+
+      .notification__time {
+        @apply text-gray-600 text-sm;
+      }
     }
   }
 }
