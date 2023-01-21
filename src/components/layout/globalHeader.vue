@@ -20,8 +20,8 @@
 
       <div class="extend-functions">
         <HeaderRightButton
-            v-for="(item, key) in extendFunctions"
-            :key="key"
+            v-for="(item, headBtnKey) in extendFunctions"
+            :key="headBtnKey"
             :item="item"
             @click="headerRightBtnClick(item.event)"
             :use-dropdown="item?.dropdowns?.length > 0"
@@ -105,23 +105,6 @@ const extendFunctions = reactive([
     // event: 'notificationShow'
   },
   {
-    icon: 'fa-solid fa-earth-asia',
-    name: 'language',
-    // tips: 'language',
-    dropdowns: [
-      {
-        name: LOCALE_OPTIONS.get('zh_CN'),
-        value: 'zh_CN',
-        click: () => changeLanguage('zh_CN')
-      },
-      {
-        name: LOCALE_OPTIONS.get('en_US'),
-        value: 'en_US',
-        click: () => changeLanguage('en_US')
-      }
-    ],
-  },
-  {
     icon: isDarkMode.value ? 'fa-solid fa-sun' : 'fa-solid fa-moon',
     name: 'dark',
     tips: 'globalHeader.darkMode.changeLightOrDark',
@@ -148,6 +131,23 @@ const extendFunctions = reactive([
         }
       }
     ]
+  },
+  {
+    icon: 'fa-solid fa-earth-asia',
+    name: 'language',
+    // tips: 'language',
+    dropdowns: [
+      {
+        name: LOCALE_OPTIONS.get('zh_CN'),
+        value: 'zh_CN',
+        click: () => changeLanguage('zh_CN')
+      },
+      {
+        name: LOCALE_OPTIONS.get('en_US'),
+        value: 'en_US',
+        click: () => changeLanguage('en_US')
+      }
+    ],
   },
   {
     icon: 'fa-solid fa-sliders',
