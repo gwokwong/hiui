@@ -1,11 +1,18 @@
 <template>
-  <div class="top-title-wrap first-active">
-    <h1 class="top-title-text">{{ props.text }}</h1>
+  <div class="top-title-wrap" :class="isAppLoading ? '' : 'first-active'">
+    <h1 class="top-title-text">
+      <slot></slot>
+    </h1>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['text'])
+// const props = defineProps(['text'])
+import {storeToRefs} from "pinia"
+import {useAppStore} from "@/lib/store/appStore"
+
+const _app = useAppStore()
+const { isAppLoading } = storeToRefs(_app)
 </script>
 
 <style scoped>

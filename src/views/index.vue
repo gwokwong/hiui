@@ -1,29 +1,49 @@
 <template>
   <div>
-    <div
-      class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
-    >
-      <h2
-        class="text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10"
-      >
-        Ready to dive in? <el-button> {{ $t("test") }} </el-button>
-        <br />
-        <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
-      </h2>
-      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <div class="inline-flex rounded-md shadow">
-          <router-link
-            to="/about"
-            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
-            >Next Page</router-link
-          >
-        </div>
-        <ButtonRepo />
-      </div>
-    </div>
+    <ItalicTitle>
+      {{ $t($route.meta.title) }}
+    </ItalicTitle>
+    <div id="demoChart" style="width: 600px; height: 840px;"></div>
   </div>
 </template>
 
 <script setup>
+let echarts = inject("echarts")
 
+/**
+ * 折线图
+ * */
+const changeType = () => {
+  // 获取组件实例
+  const demoChart = echarts.init(document.getElementById("demoChart"))
+  // 设置配置项
+  const option = {
+    xAxis: {
+      data: ["A", "B", "C", "D", "E"],
+    },
+    yAxis: {},
+    series: [
+      {
+        data: [10, 22, 28, 43, 49],
+        type: "line",
+        stack: "x",
+      },
+      {
+        data: [5, 4, 3, 5, 10],
+        type: "line",
+        stack: "x",
+      },
+    ],
+  }
+  // 复制
+  demoChart.setOption(option)
+  // 根据页面大小自动响应图表大小
+  window.addEventListener("resize", function () {
+    demoChart.resize()
+  })
+}
+
+onMounted(() => {
+  changeType()
+})
 </script>

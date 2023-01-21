@@ -12,14 +12,17 @@ const NotFound = () => import("@/views/[...404].vue")
 export const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/dashboard'
+        redirect: '/dashboard',
+        meta: {
+            title: "routes.dashboard"
+        }
     },
     {
         path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard,
         meta: {
-            title: "routes.home"
+            title: "routes.dashboard"
         }
     },
     {

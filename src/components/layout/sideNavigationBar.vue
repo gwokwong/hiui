@@ -26,7 +26,7 @@
       <span>V{{ appVersion }}</span>
     </div>
     <el-button id="navCollapseBtn" @click="emit('sideBarCollapse')" circle plain>
-      <font-awesome-icon icon="fa-solid fa-chevron-left" :rotation="isNavCollapsed ? '180' : '0'"/>
+      <font-awesome-icon icon="fa-solid fa-chevron-up" :rotation="isNavCollapsed ? '90' : '270'"/>
     </el-button>
   </div>
 </template>
@@ -47,12 +47,12 @@ const emit = defineEmits(['sideBarCollapse'])
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
   faChartLine,
-  faChevronLeft,
+  faChevronUp,
   faGrip,
 } from "@fortawesome/free-solid-svg-icons"
 const fontawesomeIcons = [
   faChartLine,
-  faChevronLeft,
+  faChevronUp,
   faGrip,
 ]
 fontawesomeIcons.forEach(icon => library.add(icon))

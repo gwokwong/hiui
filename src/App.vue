@@ -11,20 +11,15 @@
 
 <script setup>
 import MainLayout from "@/layout/mainLayout.vue"
-import {ElLoading} from "element-plus"
 import {useAppStore} from "@/lib/store/appStore"
 import {storeToRefs} from 'pinia'
-import i18n from "@/lib/i18n"
-import {useTitle} from "@vueuse/core"
-import {useRoute} from "vue-router"
+import * as echarts from "echarts"
 
-const appStore = useAppStore()
-const { appName, appLocale } = storeToRefs(appStore)
-const route = useRoute()
+provide("echarts", echarts)
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
-const { isAppLoading, isDarkMode } = storeToRefs(_app)
+const { isAppLoading, isDarkMode, appName, appLocale } = storeToRefs(_app)
 
 /**
  * @function setDarkMode
@@ -85,14 +80,6 @@ function init() {
 }
 
 init()
-
-onMounted(() => {
-  console.log('i18n', i18n, i18n.global, i18n.global?.t(route.meta?.title))
-  // @ts-ignore
-  const translatedTitle = i18n.global?.t(route.meta?.title, appLocale.value)
-  const splicedTitle = `${translatedTitle} - ${appName.value}`
-  useTitle(splicedTitle)
-})
 
 watch(() => isDarkMode.value, val => {
   setDarkMode(val)

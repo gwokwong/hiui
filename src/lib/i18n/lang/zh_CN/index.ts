@@ -1,4 +1,4 @@
-import i18nRoutes from '@/lib/router/i18n/en_US'
+import i18nRoutes from '@/lib/router/i18n/zh_CN'
 
 /** Simplified import start */
 import i18nGlobalHeader from '@/components/layout/i18n/zh_CN'

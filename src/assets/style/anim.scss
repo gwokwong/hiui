@@ -18,6 +18,11 @@
   animation: Hide 1s ease forwards;
 }
 
+.first-active {
+    animation: dash 0.5s ease forwards;
+    animation-iteration-count: 1;
+}
+
 //.anim__delay-3q4 {
 //  animation-delay: 0.75s;
 //}
@@ -88,5 +93,16 @@
         display: none;
         touch-action: none;
         pointer-events: none;
+    }
+}
+
+@keyframes dash {
+    0% {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
