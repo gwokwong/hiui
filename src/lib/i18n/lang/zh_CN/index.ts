@@ -3,6 +3,7 @@ import i18nRoutes from '@/lib/router/i18n/zh_CN'
 /** Simplified import start */
 import i18nGlobalHeader from '@/components/layout/i18n/zh_CN'
 import i18nViews from '@/views/i18n/zh_CN'
+import i18nUser from "@/views/user/i18n/zh_CN"
 /** Simplified import end */
 
 export const zh_CN = {
@@ -11,4 +12,5 @@ export const zh_CN = {
     ...i18nGlobalHeader,
     ...i18nRoutes,
     ...i18nViews,
+    ...i18nUser,
 }

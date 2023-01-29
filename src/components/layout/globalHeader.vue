@@ -36,7 +36,7 @@
 import {onMounted} from "vue"
 import {lazyImg} from "@/lib/utils/lazyImg"
 import {useRouter, useRoute} from "vue-router"
-import {LOCALE_OPTIONS} from "@/lib/i18n"
+import {LOCALE_OPTIONS, changeLanguage} from "@/lib/i18n"
 import HeaderRightButton from "@/components/layout/headerRightButton.vue"
 
 import {useAppStore} from "@/lib/store/appStore"
@@ -95,6 +95,10 @@ const defaultUserImg = () => import('@/assets/images/main/userAvatarPlaceholder.
 let logo = reactive(new Map())
 let userImg = ref(null)
 
+/**
+ * @name extendFunctions
+ * @description 顶部右侧功能按钮，在此处定义其图标、文字、事件与子项目等
+ * */
 const extendFunctions = reactive([
   {
     icon: 'fa-solid fa-bell',
@@ -135,19 +139,10 @@ const extendFunctions = reactive([
   {
     icon: 'fa-solid fa-earth-asia',
     name: 'language',
-    // tips: 'language',
-    dropdowns: [
-      {
-        name: LOCALE_OPTIONS.get('zh_CN'),
-        value: 'zh_CN',
-        click: () => changeLanguage('zh_CN')
-      },
-      {
-        name: LOCALE_OPTIONS.get('en_US'),
-        value: 'en_US',
-        click: () => changeLanguage('en_US')
-      }
-    ],
+    dropdowns: Array.from(
+        LOCALE_OPTIONS,
+        ([key, value]) => ({name: value, value: key, click: () => changeLanguage(key)})
+    )
   },
   {
     icon: 'fa-solid fa-sliders',
@@ -162,34 +157,21 @@ const extendFunctions = reactive([
       {
         icon: 'fa-solid fa-user-gear',
         name: 'globalHeader.user.profile',
-        click: () => {
-        }
+        click: () => {}
       },
       {
         icon: 'fa-solid fa-lock',
         name: 'globalHeader.user.security',
-        click: () => {
-        }
+        click: () => {}
       },
       {
         icon: 'fa-solid fa-arrow-right-from-bracket',
         name: 'globalHeader.user.logout',
-        click: () => {
-        }
+        click: () => {}
       }
     ]
   }
 ])
-
-/**
- * @function changeLanguage
- * @description 切换语言并刷新
- * @param {string} lang 语言对应字符串，比如简体中文"zh_CN"
- * */
-function changeLanguage(lang) {
-  localStorage.setItem('lang', lang)
-  window.location.reload()
-}
 
 function headerRightBtnClick(e) {
   if (!e) {

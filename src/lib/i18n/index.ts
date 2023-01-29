@@ -8,11 +8,12 @@ interface I18nOptions {
     locale: string
 }
 
-export const LOCALE_OPTIONS = new Map()
-LOCALE_OPTIONS.set("zh_CN", "中文(简体)")
-LOCALE_OPTIONS.set("en_US", "English")
+export const LOCALE_OPTIONS = new Map([
+    ["zh_CN", "中文(简体)"],
+    ["en_US", "English"]
+])
 
-const defaultLocale = localStorage.getItem('lang') || 'zh_CN';
+const defaultLocale = localStorage.getItem('lang') || 'zh_CN'
 
 const i18nOptions = {
     legacy: false,
@@ -53,6 +54,16 @@ export function setI18nLanguage(i18nInstance: I18n, locale: string): string {
     // document.querySelector('html').setAttribute('lang', locale)
     localStorage.setItem('lang', locale)
     return locale
+}
+
+/**
+* @function changeLanguage
+* @description 切换语言并刷新
+* @param {string} lang 语言对应字符串，比如简体中文"zh_CN"
+* */
+ export function changeLanguage(lang = 'zh_CN') {
+    localStorage.setItem('lang', lang)
+    window.location.reload()
 }
 
 const i18n = setupI18n(i18nOptions)

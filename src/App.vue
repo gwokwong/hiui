@@ -1,12 +1,14 @@
 <template>
-  <router-view v-if="$route.meta?.notUseLayout" v-slot="{ Component }">
-    <keep-alive>
-      <component :is="Component"></component>
-    </keep-alive>
-  </router-view>
-  <main-layout v-else @toggleDarkMode="darkModeHandler"></main-layout>
+  <el-config-provider :locale="elLocale">
+    <router-view v-if="$route.meta?.notUseLayout" v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component"></component>
+      </keep-alive>
+    </router-view>
+    <main-layout v-else @toggleDarkMode="darkModeHandler"></main-layout>
 
-  <LoadingMask :visibility="isAppLoading"></LoadingMask>
+    <LoadingMask :visibility="isAppLoading"></LoadingMask>
+  </el-config-provider>
 </template>
 
 <script setup>
@@ -16,28 +18,39 @@ import {storeToRefs} from 'pinia'
 import * as echarts from "echarts"
 
 provide("echarts", echarts)
+import zhCNLang from 'element-plus/lib/locale/lang/zh-cn'
+import enUSLang from 'element-plus/lib/locale/lang/en'
 
 // 防止与context冲突，使用_app命名
 const _app = useAppStore()
 const { isAppLoading, isDarkMode, appName, appLocale } = storeToRefs(_app)
 
+const elLocaleMap = new Map([
+  ['zh-CN', zhCNLang],
+  ['en-US', enUSLang]
+])
+const elLocale = computed(() => {
+  let curLocale = localStorage.getItem('lang') || 'zh_CN'
+  return elLocaleMap.get(curLocale)
+})
+
 /**
  * @function setDarkMode
  * @description 设置深色/浅色模式
- * @param {string} e - 模式，可选值：'dark' | 'light' | 'auto',
- * 如为boolean类型，为true时为dark，false时为light
+ * @param {string | boolean} mode - 模式，可选值：'dark' | 'light' | true | false
  * */
-function setDarkMode(e) {
+function setDarkMode(mode = 'light') {
   const html = document.documentElement
+  if (typeof mode === 'boolean') {
+    _app.setIsDarkMode(mode)
+  } else {
+    _app.setIsDarkMode(mode === 'dark')
+  }
 
-  if (typeof e === 'string') {
-    _app.setIsDarkMode(e === 'dark')
-
-    if (e === 'dark') {
-      html.classList.add('dark')
-    } else {
-      html.classList.remove('dark')
-    }
+  if (mode === true || mode === 'dark') {
+    html.classList.add('dark')
+  } else {
+    html.classList.remove('dark')
   }
 }
 
