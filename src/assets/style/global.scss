@@ -33,3 +33,47 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--color-content);
 }
+
+// tailwindCSS 对于文本输入框等添加了边框样式，此处去除
+[type='text']:focus, [type='email']:focus, [type='url']:focus,
+[type='password']:focus, [type='number']:focus, [type='date']:focus,
+[type='datetime-local']:focus, [type='month']:focus, [type='search']:focus,
+[type='tel']:focus, [type='time']:focus, [type='week']:focus,
+[multiple]:focus, textarea:focus, select:focus {
+  outline: none;
+  outline-offset: 0;
+  --tw-ring-color: transparent;
+  border-color: transparent;
+}
+
+/*
+* 长阴影实现函数：long-shadow
+* $color:颜色值
+* $opacity:透明度
+* $stepNum:投影长度
+* $stepLength:渐变步长 默认为1
+*/
+@function long-shadow($color, $opacity, $stepNum, $stepLength:1 ){
+
+  $gradient_steps: null;
+  // 计算步数
+  $steps:floor( $stepNum / $stepLength);
+
+  @for $i from 0 through $steps {
+    // 设置透明度
+    $op: $opacity - $i / $steps ;
+    // 设置颜色
+    $colour_mix: rgba($color, $op);
+
+    $separator: null;
+    // 添加连接用的逗号
+    @if($i != $steps){
+      $separator: #{','};
+    }
+    // 拼接box-shadow语句，例：1px 1px rgba(0,0,0,1),……
+    $gradient_steps: append( #{$gradient_steps}, #{$i * $stepLength }px #{$i * $stepLength }px $colour_mix $separator );
+
+  }
+  // 拼接好的语句返回
+  @return $gradient_steps;
+}

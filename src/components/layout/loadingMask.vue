@@ -30,11 +30,11 @@ const props = defineProps(['visibility'])
       @apply relative grid grid-cols-2 gap-[10px] w-full h-full;
 
       .loading-img__grid-item {
-        @apply w-[50px] h-[50px] bg-theme z-10 overflow-hidden;
+        @apply w-[50px] h-[50px] z-10 bg-theme-500 overflow-hidden;
       }
 
       .loading-img__cover {
-        @apply absolute top-0 left-0 bg-theme z-20;
+        @apply absolute top-0 left-0 bg-theme-500 z-20;
         width: 0;
         height: 0;
       }
