@@ -11,6 +11,6 @@ export default {
     'globalHeader.user.logout': 'Log out',
     'sideNav.dashboard': 'Dashboard',
     'sideNav.settings': 'Settings',
-    'sideNav.profile': 'profile',
+    'sideNav.profile': 'Profile',
     'sideNav.VFormDesigner': 'VForm Designer',
 }

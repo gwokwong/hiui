@@ -4,6 +4,7 @@ import Dashboard from "@/views/index.vue"
 
 const Login = () => import("@/views/user/login.vue")
 // const Redirect = () => import("@/components/redirect.vue")
+const Settings = () => import("@/views/settings/index.vue")
 const VFormDesigner = () => import("@/views/vForm/designer.vue")
 const VFormRender = () => import("@/views/vForm/components/vFormRender.vue")
 const NotFound = () => import("@/views/[...404].vue")
@@ -33,6 +34,15 @@ export const routes: RouteRecordRaw[] = [
             title: "routes.login",
             requiresAuth: false,
             notUseLayout: true
+        }
+    },
+    {
+        path: '/settings',
+        name: 'Settings',
+        component: Settings,
+        meta: {
+            title: "routes.settings",
+            requiresAuth: true,
         }
     },
     {

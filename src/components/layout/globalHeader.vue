@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {onMounted} from "vue"
 import {lazyImg} from "@/lib/utils/lazyImg"
 import {useRouter, useRoute} from "vue-router"
@@ -48,7 +48,7 @@ const {isNavCollapsed, isDarkMode, appNotifications} = storeToRefs(_app)
 
 const router = useRouter()
 const route = useRoute()
-let pageTitle = ref(route.meta?.title || '')
+let pageTitle = ref<string>(route['meta']?.['title'] as string || '')
 
 const emit = defineEmits(['sideBarCollapse', 'notificationShow', 'toggleDark'])
 
@@ -106,7 +106,7 @@ const extendFunctions = reactive([
     tips: 'globalHeader.notifications',
     notificationCounts: 0,
     notificationContents: [...appNotifications.value]
-    // event: 'notificationShow'
+    // click: 'notificationShow'
   },
   {
     icon: isDarkMode.value ? 'fa-solid fa-sun' : 'fa-solid fa-moon',
@@ -147,7 +147,8 @@ const extendFunctions = reactive([
   {
     icon: 'fa-solid fa-sliders',
     name: 'settings',
-    tips: 'globalHeader.settings'
+    tips: 'globalHeader.settings',
+    event: () => { router.push('/Settings') }
   },
   {
     icon: userImg,
@@ -173,10 +174,16 @@ const extendFunctions = reactive([
   }
 ])
 
-function headerRightBtnClick(e) {
+function headerRightBtnClick(e: Function | string) {
   if (!e) {
     return
   }
+
+  if (typeof e === 'function') {
+    e()
+    return
+  }
+
   emit(e)
 }
 
@@ -200,7 +207,7 @@ watch(() => isDarkMode.value, (val) => {
   extendFunctions[1].icon = val ? 'fa-solid fa-sun' : 'fa-solid fa-moon'
 })
 
-watch(() => route.meta?.title, (val) => {
+watch(() => route['meta']?.['title'], (val) => {
   pageTitle.value = val
 })
 </script>
