@@ -13,6 +13,7 @@ import 'element-plus/theme-chalk/dark/css-vars.css'
 
 // VForm3
 import VForm3 from '@/../lib/vform3/designer.umd'
+// import 'virtual:svg-icons-register'
 import '../lib/vform3/designer.style.css'
 
 import '@/assets/style/anim.scss'
