@@ -21,7 +21,7 @@ const props = defineProps(['visibility'])
 <style lang="scss" scoped>
 .loading-mask {
   @apply absolute block top-0 left-0 w-[100vw] h-[100vh] m-0 p-0 z-[100];
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-layout-bg);
 
   .loading-img__wrap {
     @apply absolute top-1/2 left-1/2 w-[110px] h-[110px] -translate-y-1/2 -translate-x-1/2;
@@ -40,11 +40,13 @@ const props = defineProps(['visibility'])
       }
 
       .loading-img__cover-horizontal {
-        @apply absolute top-1/2 w-full h-[10px] bg-white z-30 -translate-y-1/2;
+        @apply absolute top-1/2 w-full h-[10px] z-30 -translate-y-1/2;
+        background-color: var(--color-layout-bg);
       }
 
       .loading-img__cover-vertical {
-        @apply absolute left-1/2 w-[10px] h-full bg-white z-30 -translate-x-1/2;
+        @apply absolute left-1/2 w-[10px] h-full z-30 -translate-x-1/2;
+        background-color: var(--color-layout-bg);
       }
     }
   }

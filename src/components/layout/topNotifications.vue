@@ -85,7 +85,7 @@ onMounted(async () => {
       @apply w-full flex justify-between;
 
       .notification__title {
-        @apply font-bold text-black;
+        @apply font-bold;
       }
 
       .notification__time {

@@ -76,7 +76,7 @@ function login(form: LoginForm) {
   .login-container {
     @apply flex rounded-xl shadow-2xl overflow-hidden;
     $loginContainerWidth: 750px;
-    $loginContainerHeight: math.div(750px, 1.7778);
+    $loginContainerHeight: math.div(750px, 1.618);
     $loginLeftWidth: 250px;
     $loginRightWidth: $loginContainerWidth - $loginLeftWidth;
     width: $loginContainerWidth;
