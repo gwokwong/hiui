@@ -2,11 +2,6 @@
   <div class="header__container">
     <div class="header__nav-bar">
       <div class="left-wrap">
-        <div class="header__logo-wrap text-center">
-          <!--          <img :src="isNavCollapsed ? logo.get('collapsed') : logo.get('normal')" alt="logo">-->
-          <h1 class="header__logo-text">{{ isNavCollapsed ? 'HiUI' : 'HiUI by Hitosea' }}</h1>
-        </div>
-        <!--        TODO: error-->
         <div class="left-wrap__functions">
           <el-button @click="emit('sideBarCollapse')" type="primary" plain>
             <font-awesome-icon :icon="isNavCollapsed ? 'fa-solid fa-angles-right' : 'fa-solid fa-angles-left'"/>
@@ -238,24 +233,6 @@ watch(() => route['meta']?.['title'], (val) => {
 
         p {
           @apply mx-2.5;
-        }
-      }
-
-      .header__logo-wrap {
-        @apply flex items-center justify-start;
-        width: var(--side-bar-width);
-        transition: width 0.3s cubic-bezier(1, 0, 0, 1);
-
-        .header__logo-text {
-          // font-sbt == 自定义字体soehne-breit
-          @apply mx-auto font-sbt font-bold text-2xl text-white overflow-hidden;
-          height: 2rem;
-          overflow-wrap: anywhere;
-        }
-
-        img {
-          width: 90px;
-          height: 40px;
         }
       }
     }

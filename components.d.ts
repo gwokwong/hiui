@@ -29,6 +29,7 @@ declare module '@vue/runtime-core' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     GlobalHeader: typeof import('./src/components/layout/globalHeader.vue')['default']
+    HButton: typeof import('./src/components/basic/HButton/HButton.vue')['default']
     HeaderRightButton: typeof import('./src/components/layout/headerRightButton.vue')['default']
     ItalicTitle: typeof import('./src/components/italicTitle.vue')['default']
     LoadingMask: typeof import('./src/components/layout/loadingMask.vue')['default']

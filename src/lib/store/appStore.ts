@@ -2,6 +2,13 @@ import {defineStore} from "pinia"
 import type {Ref} from "vue"
 import {useStorage} from "@vueuse/core"
 
+import {
+    AdjustmentsHorizontalIcon,
+    HomeIcon,
+    UserIcon,
+    WrenchScrewdriverIcon,
+} from '@heroicons/vue/24/outline'
+
 /**
  * ref() 就是 state 属性
  * computed() 就是 getters
@@ -20,22 +27,22 @@ export const useAppStore = defineStore('app', () => {
     const appSideBarItems = reactive([
         {
             name: 'Dashboard',
-            icon: 'fa-solid fa-chart-line',
+            icon: HomeIcon,
             title: 'sideNav.dashboard'
         },
         {
             name: 'Settings',
-            icon: 'fa-solid fa-sliders',
+            icon: AdjustmentsHorizontalIcon,
             title: 'sideNav.settings'
         },
         {
             name: 'Profile',
-            icon: 'fa-solid fa-user',
+            icon: UserIcon,
             title: 'sideNav.profile'
         },
         {
             name: 'Designer',
-            icon: 'fa-solid fa-grip',
+            icon: WrenchScrewdriverIcon,
             title: 'sideNav.VFormDesigner'
         },
     ])

@@ -1,26 +1,29 @@
 <template>
-  <header>
-    <GlobalHeader
-        @sideBarCollapse="toggleNavigationBar"
-        @notificationShow="!!isNotificationsDialogShown"
-        @toggleDark="toggleDarkMode"
-    ></GlobalHeader>
-  </header>
-  <main>
-    <nav>
-      <side-navigation-bar @sideBarCollapse="toggleNavigationBar"></side-navigation-bar>
-    </nav>
-
-    <div class="router-view">
-      <div class="router-view__content" :data-is-designer="$route.name === 'VFormDesigner'">
-        <router-view v-slot="{ Component }">
-          <keep-alive>
-            <component :is="Component"></component>
-          </keep-alive>
-        </router-view>
+  <div class="flex">
+    <section>
+      <nav>
+        <SideNavigationBar @sideBarCollapse="toggleNavigationBar"></SideNavigationBar>
+      </nav>
+    </section>
+    <main>
+      <header>
+        <GlobalHeader
+            @sideBarCollapse="toggleNavigationBar"
+            @notificationShow="!!isNotificationsDialogShown"
+            @toggleDark="toggleDarkMode"
+        ></GlobalHeader>
+      </header>
+      <div class="router-view">
+        <div class="router-view__content" :data-is-designer="$route.name === 'VFormDesigner'">
+          <router-view v-slot="{ Component }">
+            <keep-alive>
+              <component :is="Component"></component>
+            </keep-alive>
+          </router-view>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 
 <!--  <el-dialog-->
 <!--      v-model="isNotificationsDialogShown"-->
@@ -104,13 +107,13 @@ onMounted(() => {
 
 <style lang="scss">
 main {
-  @apply flex overflow-hidden;
+  @apply flex flex-col overflow-hidden;
 }
 
 .router-view {
-  @apply bg-gradient-to-br from-theme-400 via-theme-500 to-theme-600;
+  @apply w-full bg-gradient-to-br from-theme-400 via-theme-500 to-theme-600;
   height: available;
-  width: calc(100vw - var(--side-bar-width));
+  //width: calc(100vw - var(--side-bar-width));
   padding: var(--router-view-padding);
   transition: width 0s;
 }

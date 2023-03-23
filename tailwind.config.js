@@ -19,11 +19,16 @@ module.exports = {
       },
       colors: {
         'theme': {
+          default: 'var(--color-primary)',
           '400': 'var(--color-primary-light)',
           '500': 'var(--color-primary)',
           '600': 'var(--color-primary-dark)',
         },
-        'content': 'var(--color-content)'
+        'content': 'var(--color-content)',
+        light: {
+
+        },
+        dark: {},
       },
       backgroundColor: {
         'theme': {
@@ -33,6 +38,8 @@ module.exports = {
           '600': 'var(--color-primary-dark)',
         },
         'content': 'var(--color-content-bg)',
+        light: {},
+        dark: {}
       },
     },
   },
