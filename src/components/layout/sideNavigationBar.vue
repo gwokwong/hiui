@@ -152,7 +152,7 @@ fontawesomeIcons.forEach(icon => library.add(icon))
         transition-delay: 0s;
 
         .icon {
-          @apply w-[24px] h-[24px] flex justify-center items-center mr-2 lg:mr-3;
+          @apply w-[24px] h-[24px] flex justify-center items-center mr-2 lg:mr-3 transition-all;
           svg, img {
             @apply h-full text-gray-400 group-hover:text-gray-500 transition-all;
           }
@@ -184,7 +184,12 @@ fontawesomeIcons.forEach(icon => library.add(icon))
         }
 
         &[data-nav-collapse="true"] {
-          @apply px-[18px];
+          @apply flex justify-center items-center;
+          //@apply px-[18px];
+
+          .icon {
+            @apply mr-0;
+          }
         }
       }
 
